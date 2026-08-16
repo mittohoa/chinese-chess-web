@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PHÁO đầu — cờ tướng tiếng Việt</title>
+<meta name="description" content="App cờ tướng tiếng Việt: học luật từ đầu, máy đấu 8 mức, chơi hoàn toàn ngoại tuyến. Không tài khoản, không quảng cáo, không đòi quyền gì của bạn.">
+<meta name="theme-color" content="#B3241C">
+<link rel="icon" href="anh/logo.png" type="image/png">
+<style>
+  :root {
+    --bg: #faf5ea;
+    --surface: #ffffff;
+    --ink: #1f1b16;
+    --muted: #6b6257;
+    --line: #e7dcc8;
+    --accent: #b3241c;
+    --accent-soft: #f3dfb8;
+    --wood: #ebcf9a;
+    --ok: #1b7f4b;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141210;
+      --surface: #1e1a16;
+      --ink: #f3ece1;
+      --muted: #a99c8a;
+      --line: #332c24;
+      --accent: #ff7c6e;
+      --accent-soft: #3a2a20;
+      --wood: #3a3129;
+      --ok: #4bc38a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  header .wrap { display: flex; align-items: center; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+  header img { width: 34px; height: 34px; border-radius: 9px; }
+  header b { font-size: 1.05rem; }
+  header nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
+  header nav a { color: var(--muted); text-decoration: none; font-size: .93rem; }
+  header nav a:hover { color: var(--accent); }
+
+  .hero { padding: 56px 0 40px; text-align: center; }
+  .hero img.logo { width: 118px; height: 118px; border-radius: 26px; box-shadow: 0 8px 26px rgba(0,0,0,.18); }
+  .hero h1 { font-size: 2.6rem; margin: 22px 0 6px; letter-spacing: -.5px; }
+  .hero .tag { color: var(--accent); font-weight: 700; margin: 0 0 14px; }
+  .hero p.lead { color: var(--muted); max-width: 560px; margin: 0 auto 28px; font-size: 1.08rem; }
+
+  .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1.5px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.ghost { color: var(--accent); }
+  .note { color: var(--muted); font-size: .87rem; margin-top: 14px; }
+
+  main { padding: 10px 0 70px; }
+  section { padding-top: 46px; }
+  h2 { font-size: 1.4rem; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 22px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 1.03rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .shots figure { margin: 0; }
+  .shots img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+  .shots figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; text-align: center; }
+
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .yes { color: var(--ok); font-weight: 700; }
+  .no { color: var(--accent); font-weight: 700; }
+
+  .panel {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+  }
+  .panel h3 { margin: 0 0 8px; }
+  .panel p { margin: 0 0 10px; }
+  .panel ul { margin: 0; padding-left: 20px; color: var(--ink); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+    padding: 26px 0 40px;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a { color: var(--accent); }
+  code { background: var(--accent-soft); padding: 1px 6px; border-radius: 5px; font-size: .9em; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="anh/logo.png" alt="Biểu tượng PHÁO đầu">
+    <b>PHÁO đầu</b>
+    <nav>
+      <a href="#tinh-nang">Tính năng</a>
+      <a href="#luat">Luật</a>
+      <a href="#may">Máy đấu</a>
+      <a href="#chua-co">Chưa có</a>
+      <a href="rieng-tu.html">Riêng tư</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <img class="logo" src="anh/logo.png" alt="Biểu tượng PHÁO đầu">
+    <h1>PHÁO đầu</h1>
+    <p class="tag">Cờ tướng tiếng Việt</p>
+    <p class="lead">
+      Học luật từ con số không, chơi ngay khi không có mạng, và có đối thủ máy
+      tám mức để đánh cùng. Không tài khoản, không quảng cáo, không đòi quyền gì
+      của bạn.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/mittohoa/chinese-chess-web/releases/latest">Tải bản Android</a>
+      <a class="btn ghost" href="choi-thu/">Chơi thử trên trình duyệt</a>
+    </div>
+    <p class="note">Bản 0.3.0 · APK 21 MB · Android 5.0 trở lên</p>
+  </div>
+
+  <section id="tinh-nang">
+    <h2>Có gì trong bản này</h2>
+    <p class="sub">Ba lối vào, xếp theo đúng thứ tự người mới cần.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Học luật đi quân</h3>
+        <p>Tám bài, mỗi quân một bài. Chạm vào quân là thấy nó đi được những đâu — kể cả bài riêng về luật Tướng đối mặt.</p>
+      </div>
+      <div class="card">
+        <h3>Chơi với máy, tám mức</h3>
+        <p>Từ mức người mới thắng được tới mức máy nghĩ hết sức. Có nút <b>Gợi ý</b> chỉ nước nên đi.</p>
+      </div>
+      <div class="card">
+        <h3>Chơi hai người chung máy</h3>
+        <p>Có gợi ý nước đi, hoàn tác, biên bản ván, và tuỳ chọn xoay bàn theo lượt.</p>
+      </div>
+      <div class="card">
+        <h3>Bộ chữ Việt trên quân</h3>
+        <p>Tướng · Sĩ · Tượng · Xe · Pháo · Mã · Tốt. Đọc được ngay mà không cần biết chữ Hán. Đổi sang chữ Hán hoặc giản thể tuỳ ý.</p>
+      </div>
+      <div class="card">
+        <h3>Ký pháp Việt</h3>
+        <p>Biên bản ghi kiểu <i>Pháo 2 bình 5</i>, đúng cách người Việt đọc ngoài đời. Đổi sang toạ độ kiểu quốc tế được.</p>
+      </div>
+      <div class="card">
+        <h3>Nhìn kém vẫn chơi được</h3>
+        <p>Cỡ chữ trên quân chỉnh riêng, không phụ thuộc cỡ chữ hệ thống. Hai bên khác nhau cả ở độ dày viền chứ không chỉ ở màu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Nhìn qua</h2>
+    <p class="sub">Ảnh chụp từ bản 0.3.0 chạy thật, không dựng lại.</p>
+    <div class="shots">
+      <figure>
+        <img src="anh/man-hinh-chinh.png" alt="Trang chính của app">
+        <figcaption>Trang chính</figcaption>
+      </figure>
+      <figure>
+        <img src="anh/ban-co.png" alt="Bàn cờ tướng với quân Pháo đang được chọn">
+        <figcaption>Bàn cờ, có gợi ý nước đi</figcaption>
+      </figure>
+      <figure>
+        <img src="anh/hoc-luat.png" alt="Màn học luật đi quân">
+        <figcaption>Học luật đi quân</figcaption>
+      </figure>
+      <figure>
+        <img src="anh/goi-y.png" alt="Máy gợi ý một nước đi">
+        <figcaption>Máy gợi ý nước đi</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="luat">
+    <h2>Luật đúng tới đâu</h2>
+    <p class="sub">
+      Không nói suông. <b>Perft</b> là phép đếm số thế cờ có thể có ở từng độ sâu
+      — nó bắt gần như mọi lỗi luật. Con số của app khớp đúng bảng chuẩn công bố:
+    </p>
+    <table>
+      <tr><th>Độ sâu</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th></tr>
+      <tr><td>Số thế cờ</td><td class="num">44</td><td class="num">1 920</td><td class="num">79 666</td><td class="num">3 290 240</td><td class="num">133 312 995</td></tr>
+    </table>
+    <p style="margin-top:18px">
+      Gồm cả những chỗ cờ tướng khác cờ vua nhiều nhất: <b>cản chân Mã</b>,
+      <b>Pháo ăn qua ngòi</b>, <b>Tượng không qua sông</b>, <b>Tướng đối mặt</b>,
+      và <b>hết nước đi là thua chứ không hoà</b>.
+    </p>
+  </section>
+
+  <section id="may">
+    <h2>Máy đấu được đo, không phải được khen</h2>
+    <p class="sub">
+      Mỗi phần của máy đấu phải tự thắng được bản không có nó qua 32 ván tự đối
+      mới được nhận vào bản phát hành. Đây là toàn bộ số đo, kể cả hai kết quả xấu:
+    </p>
+    <table>
+      <tr><th>Phần thêm vào</th><th class="num">Đo được</th><th>Nhận?</th></tr>
+      <tr><td>Tìm kiếm cơ bản, đấu với bản đi ngẫu nhiên</td><td class="num">32–0–0</td><td class="yes">có</td></tr>
+      <tr><td>Sắp nước + bảng chuyển vị (số nút duyệt)</td><td class="num">còn 0,5%</td><td class="yes">có</td></tr>
+      <tr><td>Đào sâu chuỗi đổi quân</td><td class="num">65,6%</td><td class="yes">có</td></tr>
+      <tr><td>Điểm theo vị trí quân trên bàn</td><td class="num">87,5%</td><td class="yes">có</td></tr>
+      <tr><td>An toàn Tướng</td><td class="num">51,6%</td><td class="no">không</td></tr>
+      <tr><td>Giá Pháo/Mã đổi theo giai đoạn ván</td><td class="num">48,4%</td><td class="no">không</td></tr>
+    </table>
+    <p style="margin-top:18px">
+      Hai phần cuối <b>đúng về lý thuyết nhưng đo không ra tác dụng</b>, nên đã tắt.
+      Ở 32 ván chúng ra 54,7% và 57,8% — nghe như có ích; đo lại 64 ván với hạt
+      ngẫu nhiên khác thì còn 51,6% và 48,4%. Con số đẹp ở mẫu nhỏ là nhiễu chứ
+      không phải cải tiến.
+    </p>
+  </section>
+
+  <section id="chua-co">
+    <h2>Chưa có gì</h2>
+    <p class="sub">Nói trước để bạn khỏi tải về rồi mới biết.</p>
+    <div class="panel">
+      <h3>Bản 0.3.0 chưa có</h3>
+      <ul>
+        <li>Bài tập chiến thuật và <b>cờ thế</b></li>
+        <li>Chấm ván, lịch sử ván, thống kê</li>
+        <li>Âm thanh và hoạt cảnh quân đi</li>
+        <li>Lưu ván đang dở khi thoát app</li>
+        <li>Chơi qua mạng</li>
+      </ul>
+      <p style="margin:14px 0 0">
+        Và một điều về luật: <b>luật cấm chiếu mãi / đuổi mãi chưa được cài.</b>
+        Bản này chỉ xử lặp thế ba lần là hoà, giống cờ vua. Cài sai luật cấm còn
+        tệ hơn không cài, nên phần đó để lại làm cùng người rành luật. App có nói
+        rõ điều này ngay trong màn hình.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quyền và dữ liệu</h2>
+    <p class="sub">Ngắn thôi, vì thật sự không có gì.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Không xin quyền nào của bạn</h3>
+        <p>Không mạng, không lưu trữ ngoài, không thông báo, không rung, không vị trí. Bản kê khai chỉ có đúng một quyền nội bộ do thư viện Android tự thêm — <a href="rieng-tu.html#quyen">giải thích ở đây</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Không thu thập gì</h3>
+        <p>Không tài khoản, không quảng cáo, không đo đạc hành vi. Cài đặt của bạn nằm trong máy bạn.</p>
+      </div>
+      <div class="card">
+        <h3>Chạy được khi tắt mạng</h3>
+        <p>Toàn bộ máy đấu chạy ngay trên máy bạn. Bật chế độ máy bay vẫn chơi bình thường.</p>
+      </div>
+    </div>
+    <p style="margin-top:18px"><a href="rieng-tu.html">Đọc chính sách quyền riêng tư đầy đủ →</a></p>
+  </section>
+
+  <section>
+    <h2>Vì sao tên là “PHÁO đầu”</h2>
+    <p>
+      <b>Pháo đầu</b> là khai cuộc phổ biến nhất của cờ tướng: đưa Pháo về cột
+      giữa, nhắm thẳng vào Tướng đối phương. Cùng nhà với app cờ vua
+      <a href="https://mittohoa.github.io/chess-game-web/">TỐT thí</a> — cũng lấy
+      một nước cờ ai cũng biết làm tên.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <b>PHÁO đầu</b> · bản 0.3.0 · cập nhật 16-08-2026 ·
+      <a href="rieng-tu.html">Quyền riêng tư</a> ·
+      <a href="https://github.com/mittohoa/chinese-chess-web/releases">Các bản phát hành</a>
+    </p>
+    <p>
+      App chạy hoàn toàn ngoại tuyến và miễn phí. Mã nguồn để ở kho riêng.
+      Góp ý: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

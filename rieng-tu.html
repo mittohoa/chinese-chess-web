@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — PHÁO đầu</title>
+<meta name="description" content="Chính sách quyền riêng tư của app cờ tướng PHÁO đầu. App không thu thập dữ liệu nào, không kết nối mạng, và không đòi quyền nào của người dùng.">
+<meta name="theme-color" content="#B3241C">
+<link rel="icon" href="anh/logo.png" type="image/png">
+<style>
+  :root {
+    --bg: #faf5ea;
+    --surface: #ffffff;
+    --ink: #1f1b16;
+    --muted: #6b6257;
+    --line: #e7dcc8;
+    --accent: #b3241c;
+    --accent-soft: #f3dfb8;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141210;
+      --surface: #1e1a16;
+      --ink: #f3ece1;
+      --muted: #a99c8a;
+      --line: #332c24;
+      --accent: #ff7c6e;
+      --accent-soft: #3a2a20;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header { border-bottom: 1px solid var(--line); padding: 16px 0; background: var(--surface); }
+  header .wrap { display: flex; align-items: center; gap: 12px; }
+  header img { width: 32px; height: 32px; border-radius: 8px; }
+  header a { color: var(--ink); text-decoration: none; font-weight: 700; }
+  main { padding: 38px 0 70px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 34px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  ul { padding-left: 22px; }
+  .box {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  code { background: var(--surface); padding: 2px 6px; border-radius: 5px; font-size: .88em; word-break: break-all; }
+  footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--muted); font-size: .9rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="anh/logo.png" alt="Biểu tượng PHÁO đầu">
+    <a href="index.html">PHÁO đầu</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="sub">Áp dụng cho app <b>PHÁO đầu</b> bản 0.3.0 · cập nhật 16-08-2026</p>
+
+  <div class="box">
+    <p style="margin:0">
+      <b>Tóm tắt một câu:</b> app không thu thập gì, không gửi gì đi đâu, và
+      không có mã kết nối mạng nào.
+    </p>
+  </div>
+
+  <h2>App thu thập dữ liệu gì</h2>
+  <p>
+    Không có. App không hỏi tên, không hỏi email, không có tài khoản, không có
+    quảng cáo, và không đo đạc hành vi sử dụng.
+  </p>
+
+  <h2>App lưu gì trong máy bạn</h2>
+  <p>Chỉ vài cài đặt hiển thị, nằm trong vùng lưu trữ riêng của app:</p>
+  <ul>
+    <li>Bộ chữ trên quân, chủ đề bàn cờ, cỡ chữ trên quân</li>
+    <li>Kiểu ký pháp, bật/tắt gợi ý nước đi, bật/tắt xoay bàn theo lượt</li>
+  </ul>
+  <p>
+    Những giá trị này <b>không rời khỏi máy bạn</b>. Gỡ app là chúng mất theo.
+  </p>
+
+  <h2 id="quyen">Quyền Android</h2>
+  <p>
+    App <b>không đòi quyền nào của bạn</b>: không mạng, không lưu trữ ngoài,
+    không camera, không micrô, không vị trí, không danh bạ, không thông báo,
+    không rung. Vì vậy khi cài, Android không hỏi bạn đồng ý gì cả.
+  </p>
+  <p>
+    Bản kê khai của app có đúng <b>một</b> dòng quyền, và nó không phải quyền
+    xin từ bạn:
+  </p>
+  <p><code>com.mittohoa.co_tuong.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></p>
+  <p>
+    Đây là quyền <b>mức chữ ký, do thư viện AndroidX tự thêm vào</b> mọi app
+    dùng nó. Nó chỉ có tác dụng ngăn app khác gửi thông điệp nội bộ vào app này
+    — nghĩa là nó bảo vệ bạn chứ không mở thêm quyền gì. Nó không hiện trong
+    danh sách quyền mà hệ điều hành hỏi người dùng.
+  </p>
+  <p>
+    Nếu bản sau có thêm quyền nào, trang này sẽ được cập nhật <b>trước</b> khi
+    bản đó phát hành, và ghi rõ: quyền gì, để làm gì, tắt được không.
+  </p>
+
+  <h2>App có kết nối mạng không</h2>
+  <p>
+    Không. Bản 0.3.0 <b>không khai báo quyền INTERNET</b>, nghĩa là hệ điều hành
+    chặn mọi kết nối mạng của app kể cả khi có mã cố tình gọi. Máy đấu chạy hoàn
+    toàn trên máy bạn. Bật chế độ máy bay thì app vẫn chạy đủ mọi thứ.
+  </p>
+  <p>
+    Hệ quả: app <b>chưa</b> có chức năng tự kiểm tra bản cập nhật. Muốn biết có
+    bản mới thì ghé
+    <a href="https://github.com/mittohoa/chinese-chess-web/releases">trang phát hành</a>.
+  </p>
+
+  <h2>Bản chơi thử trên trình duyệt</h2>
+  <p>
+    Bản chơi thử được phục vụ qua GitHub Pages. Trang không đặt cookie, không
+    gắn mã theo dõi, không gọi ra máy chủ nào ngoài GitHub để tải chính nó. Máy
+    chủ của GitHub có ghi nhật ký truy cập theo chính sách của họ, và điều đó
+    nằm ngoài tầm kiểm soát của app này.
+  </p>
+
+  <h2>Trẻ em</h2>
+  <p>
+    App phù hợp với mọi lứa tuổi. Vì không thu thập dữ liệu nào nên cũng không
+    thu thập dữ liệu của trẻ em.
+  </p>
+
+  <h2>Liên hệ</h2>
+  <p>
+    Có gì chưa rõ hoặc thấy chính sách này không khớp với app thật, viết cho
+    <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
+  </p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Về trang chính</a>
+  </div>
+</footer>
+
+</body>
+</html>
