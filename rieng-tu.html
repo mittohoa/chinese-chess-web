@@ -124,14 +124,28 @@
 
   <h2>App có kết nối mạng không</h2>
   <p>
-    Không. Bản 0.3.0 <b>không khai báo quyền INTERNET</b>, nghĩa là hệ điều hành
-    chặn mọi kết nối mạng của app kể cả khi có mã cố tình gọi. Máy đấu chạy hoàn
-    toàn trên máy bạn. Bật chế độ máy bay thì app vẫn chạy đủ mọi thứ.
+    Không. App <b>không khai báo quyền INTERNET</b> — vẫn đúng như vậy từ bản
+    0.3.0 tới bản 0.6.0 — nghĩa là hệ điều hành chặn mọi kết nối mạng của app kể
+    cả khi có mã cố tình gọi. Máy đấu, chấm ván và thống kê đều chạy hoàn toàn
+    trên máy bạn. Bật chế độ máy bay thì app vẫn chạy đủ mọi thứ.
   </p>
   <p>
-    Hệ quả: app <b>chưa</b> có chức năng tự kiểm tra bản cập nhật. Muốn biết có
-    bản mới thì ghé
+    Hệ quả: app <b>không</b> tự kiểm tra bản cập nhật, và sẽ không bao giờ tự
+    kiểm tra chừng nào lời hứa trên còn đứng — kiểm tra thì phải xin quyền mạng.
+  </p>
+  <p>
+    Từ bản 0.6.0, màn <b>Cài đặt</b> có nút <i>Xem bản mới trên trang phát
+    hành</i>. Nút đó <b>giao địa chỉ cho trình duyệt của bạn</b> rồi thôi: thứ
+    nối mạng là trình duyệt, không phải app. App không đọc được gì từ trang đó,
+    và không biết bạn có mở hay không. Muốn tự vào thẳng cũng được:
     <a href="https://github.com/mittohoa/chinese-chess-web/releases">trang phát hành</a>.
+  </p>
+  <p>
+    Về mặt kỹ thuật, bản kê khai Android có thêm một mục <code>&lt;queries&gt;</code>
+    cho <code>VIEW</code>/<code>https</code>. Đó là <b>khả năng nhìn thấy ứng
+    dụng khác</b> (để mở được trình duyệt trên Android 11 trở lên), <b>không
+    phải quyền</b>: nó không mở mạng cho app và không hiện trong danh sách quyền
+    hệ điều hành hỏi bạn.
   </p>
 
   <h2>Bản chơi thử trên trình duyệt</h2>
