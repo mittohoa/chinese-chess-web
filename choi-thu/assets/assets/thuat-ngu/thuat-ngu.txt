@@ -1,0 +1,83 @@
+# Từ điển thuật ngữ cờ tướng
+#
+# Mỗi dòng: <nhóm>|<thuật ngữ Việt>|<chữ Hán>|<tiếng Anh>|<giải thích>
+#
+# Cột giữa để **chữ Hán** chứ không để âm Hán-Việt, vì gần như mọi thuật ngữ cờ
+# tướng tiếng Việt **vốn đã là âm Hán-Việt** rồi: bình, tấn, thoái, pháo đầu,
+# bình phong mã… Thứ người đọc thiếu là mặt chữ (để đọc được bàn cờ, sách cũ,
+# tài liệu tiếng Trung) và từ tiếng Anh (để tra tài liệu nước ngoài).
+#
+# Dấu — nghĩa là không có từ tương ứng gọn gàng, không phải bỏ sót.
+
+Quân cờ|Tướng|將 / 帥|General|Quân đầu não. Bên Đen ghi 將, bên Đỏ ghi 帥 — hai chữ khác nhau nhưng cùng một quân. Chỉ đi trong cung, mất Tướng là thua.
+Quân cờ|Sĩ|士 / 仕|Advisor|Đi chéo một bước, không rời cung. Quân hộ vệ sát Tướng nhất; mất Sĩ là cửa cho Pháo đối phương.
+Quân cờ|Tượng|象 / 相|Elephant|Đi chéo hai bước và không qua sông. Chỉ đứng được ở bảy giao điểm bên phần sân nhà.
+Quân cờ|Mã|馬 / 傌|Horse|Đi một bước thẳng rồi một bước chéo, và **bị cản chân** — khác hẳn Mã cờ vua.
+Quân cờ|Xe|車 / 俥|Chariot|Đi thẳng ngang dọc không giới hạn. Quân mạnh nhất bàn cờ.
+Quân cờ|Pháo|砲 / 炮|Cannon|Đi như Xe nhưng **ăn phải nhảy qua đúng một quân**. Không có quân nào tương tự trong cờ vua.
+Quân cờ|Tốt|卒 / 兵|Soldier|Tiến một bước, không bao giờ lùi. Qua sông thì đi ngang được, và giá trị tăng gấp đôi.
+
+Bàn cờ|Cung|九宮|Palace|Ô vuông ba nhân ba có gạch chéo ở hai đầu bàn. Tướng và Sĩ không bao giờ ra khỏi đây.
+Bàn cờ|Sông|河界|River|Dải trống giữa bàn, ngăn hai bên. Tượng không qua được, Tốt qua rồi thì mạnh hẳn lên.
+Bàn cờ|Sở hà Hán giới|楚河漢界|—|Bốn chữ in trên dải sông, lấy tích Hán Sở tranh hùng: sông ngăn đất Sở và đất Hán.
+Bàn cờ|Giao điểm|交點|Point / Intersection|Chỗ hai đường kẻ cắt nhau. Quân cờ tướng đứng **trên giao điểm**, không đứng trong ô.
+Bàn cờ|Đường ngang|橫線|Rank|Mười đường kẻ ngang của bàn cờ.
+Bàn cờ|Đường dọc|直線|File|Chín đường kẻ dọc. Ký pháp gọi là "cột" và đếm từ phía mình.
+
+Ký pháp|Bình|平|Traverse|Đi ngang. Ví dụ *Pháo 2 bình 5*: Pháo ở cột 2 đi ngang sang cột 5.
+Ký pháp|Tấn|進|Advance|Đi lên phía đối phương. Quân đi thẳng ghi số nấc, quân đi chéo ghi cột đích.
+Ký pháp|Thoái|退|Retreat|Đi lùi về phía mình. Ví dụ *Xe 5 thoái 2*: Xe ở cột 5 lùi hai nấc. Riêng Tốt thì không bao giờ có nước thoái.
+Ký pháp|Tiền|前|Front|Dùng khi hai quân cùng loại đứng chung một cột: quân gần đối phương hơn gọi là *tiền*.
+Ký pháp|Hậu|後|Rear|Quân xa đối phương hơn trong hai quân cùng cột.
+Ký pháp|Biên bản|棋譜|Game record|Bản ghi toàn bộ nước đi của một ván.
+Ký pháp|Số cột|—|File number|Cột đếm **từ phía mình, từ phải sang trái**. Cùng một cột trên bàn, hai bên gọi bằng hai số khác nhau — chỗ người mới nhầm nhiều nhất.
+
+Luật|Chiếu tướng|將軍|Check|Doạ ăn Tướng đối phương ở nước sau. Bên bị chiếu buộc phải gỡ.
+Luật|Chiếu hết|將死|Checkmate|Bị chiếu mà không còn cách gỡ. Thua ván.
+Luật|Hết nước đi|困斃|Stalemate (loss)|Không bị chiếu nhưng không còn nước hợp lệ nào. Ở cờ tướng đây là **thua**, khác cờ vua là hoà.
+Luật|Tướng đối mặt|對面笑|Flying general|Hai Tướng không được đứng cùng cột mà giữa không có quân nào. Nước tạo ra tình trạng đó là nước không hợp lệ.
+Luật|Cản chân mã|蹩馬腿|Hobbled horse|Quân đứng kề Mã theo hướng đi thì Mã không nhảy được về phía đó.
+Luật|Ngòi pháo|炮架|Cannon screen|Quân nằm giữa Pháo và mục tiêu, để Pháo nhảy qua mà ăn. Của bên nào cũng được.
+Luật|Mắt tượng|象眼|Elephant eye|Giao điểm chính giữa đường chéo của Tượng. Có quân đứng đó thì Tượng không đi hướng ấy.
+Luật|Qua sông|過河|Cross the river|Tốt sang phần sân đối phương: từ đó đi ngang được và đáng gấp đôi.
+Luật|Hoà cờ|和棋|Draw|Ván không phân thắng bại.
+Luật|Lặp thế|重複局面|Repetition|Cùng một thế cờ xuất hiện nhiều lần. Lặp ba lần thì xử hoà.
+Luật|Chiếu mãi|長將|Perpetual check|Chiếu liên tục không dứt. Luật cờ tướng **cấm**, bên chiếu mãi bị xử thua.
+Luật|Đuổi mãi|長捉|Perpetual chase|Đuổi bắt một quân liên tục không dứt. Cũng bị cấm, và khó phân định hơn chiếu mãi nhiều.
+
+Giai đoạn|Khai cuộc|開局|Opening|Chừng mươi nước đầu, lúc hai bên triển khai quân.
+Giai đoạn|Trung cuộc|中局|Middlegame|Giai đoạn giao tranh chính, nhiều đòn phối hợp nhất.
+Giai đoạn|Tàn cuộc|殘局|Endgame|Bàn cờ đã thưa quân. Cờ tướng có kho lý thuyết tàn cuộc rất rõ ràng.
+Giai đoạn|Cờ thế|排局|Composed problem|Thế cờ dựng sẵn, thường là "đi trước thắng", để luyện tính toán.
+
+Khai cuộc|Pháo đầu|當頭炮|Central cannon|Đưa Pháo về cột giữa nhắm thẳng Tướng đối phương. Khai cuộc phổ biến nhất.
+Khai cuộc|Bình phong mã|屏風馬|Screen horses|Hai Mã đứng cạnh nhau che trước Tướng. Cách chống Pháo đầu vững chắc nhất.
+Khai cuộc|Đơn đề mã|單提馬|Single horse|Chỉ lên một Mã giữ nhà, Mã kia đi biên.
+Khai cuộc|Phản công mã|反宮馬|Reversed-palace horses|Bình phong mã có thêm Pháo nằm giữa hai Mã.
+Khai cuộc|Thuận pháo|順炮|Same-direction cannons|Hai bên cùng đưa Pháo về cột giữa theo cùng một phía.
+Khai cuộc|Nghịch pháo|列炮|Opposite cannons|Hai bên đưa Pháo về cột giữa nhưng ngược phía nhau.
+Khai cuộc|Tiên nhân chỉ lộ|仙人指路|Pawn opening|Mở đầu bằng nước tiến Tốt 3 hoặc Tốt 7, chờ xem đối phương bày trận rồi mới chọn hướng.
+Khai cuộc|Phi tượng cục|飛象局|Elephant opening|Mở đầu bằng nước lên Tượng giữa, lối chơi chắc chắn.
+Khai cuộc|Quá cung pháo|過宮炮|Cross-palace cannon|Đưa Pháo sang cột bên kia, ngang qua trước cung.
+Khai cuộc|Sĩ giác pháo|士角炮|Advisor-corner cannon|Đưa Pháo về cột của Sĩ.
+Khai cuộc|Khởi mã cục|起馬局|Horse opening|Mở đầu bằng nước lên Mã.
+
+Chiến thuật|Thí quân|棄子|Sacrifice|Cho đi một quân để đổi lấy thế trận hoặc đòn kết thúc.
+Chiến thuật|Đổi quân|兌子|Exchange|Đổi quân ngang giá, thường để gỡ thế bí hoặc đơn giản hoá bàn cờ.
+Chiến thuật|Đòn đôi|雙擊|Double attack|Một nước doạ hai chỗ cùng lúc, đối phương chỉ gỡ được một.
+Chiến thuật|Ghim quân|牽制|Pin|Buộc một quân đứng yên vì nhúc nhích là mất quân lớn hơn phía sau.
+Chiến thuật|Chiếu rút|抽將|Discovered check|Dời một quân đi để quân phía sau chiếu Tướng, đồng thời quân vừa dời ăn được thứ khác.
+Chiến thuật|Vây quân|困子|Trapping|Vây một quân đến mức nó không còn đường thoát.
+Chiến thuật|Tiên thủ|先手|Initiative|Bên đi trước, hoặc bên đang nắm thế chủ động. Trong cờ tướng, Đỏ đi trước nên Đỏ là tiên thủ.
+Chiến thuật|Hậu thủ|後手|Second player|Bên đi sau, tức bên Đen.
+Chiến thuật|Chấp quân|讓子|Handicap|Bên mạnh bớt quân cho cân sức, thường là bớt Mã hoặc Pháo.
+
+Thế cờ|Song mã ẩm tuyền|雙馬飲泉|Two horses drinking|Thế chiếu hết bằng hai Mã phối hợp, một trong những thế đẹp nhất của cờ tướng.
+Thế cờ|Trầm để pháo|沉底炮|Bottom cannon|Đưa Pháo xuống hàng cuối của đối phương, phối hợp với Xe rất mạnh.
+Thế cờ|Không đầu pháo|空頭炮|Hollow cannon|Pháo nhắm thẳng Tướng đối phương mà giữa **không có quân nào chắn** — đòn ép rất nặng.
+Thế cờ|Sĩ tượng toàn|士象全|Full guards|Còn đủ hai Sĩ hai Tượng. Thước đo khả năng phòng thủ ở tàn cuộc.
+Thế cờ|Khuyết sĩ|缺士|Missing advisor|Thiếu Sĩ. Rất nguy khi đối phương còn Pháo.
+Thế cờ|Tốt qua hà|過河卒|Crossed pawn|Tốt đã qua sông. Sách cờ có câu: Tốt qua sông bằng nửa quân Xe.
+Thế cờ|Song xe|雙車|Two chariots|Hai Xe phối hợp, đòn chiếu hết cơ bản nhất và cũng đáng sợ nhất.
+Thế cờ|Xe pháo|車炮|Chariot and cannon|Cặp quân phối hợp ăn ý nhất ở trung cuộc.
+Thế cờ|Mã pháo|馬炮|Horse and cannon|Cặp quân mạnh ở tàn cuộc, khi bàn thưa và Mã hết bị cản chân.
