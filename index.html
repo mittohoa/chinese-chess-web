@@ -135,6 +135,7 @@
     <b>PHÁO đầu</b>
     <nav>
       <a href="#tinh-nang">Tính năng</a>
+      <a href="#co-the">Cờ thế</a>
       <a href="#luat">Luật</a>
       <a href="#may">Máy đấu</a>
       <a href="#chua-co">Chưa có</a>
@@ -158,7 +159,7 @@
       <a class="btn primary" href="https://github.com/mittohoa/chinese-chess-web/releases/latest">Tải bản Android</a>
       <a class="btn ghost" href="choi-thu/">Chơi thử trên trình duyệt</a>
     </div>
-    <p class="note">Bản 0.3.2 · APK 21 MB · Android 5.0 trở lên</p>
+    <p class="note">Bản 0.4.0 · APK 21 MB · Android 5.0 trở lên</p>
   </div>
 
   <section id="tinh-nang">
@@ -172,6 +173,10 @@
       <div class="card">
         <h3>Chơi với máy, tám mức</h3>
         <p>Từ mức người mới thắng được tới mức máy nghĩ hết sức. Có nút <b>Gợi ý</b> chỉ nước nên đi.</p>
+      </div>
+      <div class="card">
+        <h3>110 bài cờ thế</h3>
+        <p>Thế <b>Đỏ đi trước thắng</b>, chia theo chiếu hết 1, 2 hay 3 nước. Đi sai thì bàn cờ lùi lại và nói ngay — cờ thế là bài toán có lời giải, không phải ván cờ.</p>
       </div>
       <div class="card">
         <h3>Chơi hai người chung máy</h3>
@@ -194,11 +199,15 @@
 
   <section>
     <h2>Nhìn qua</h2>
-    <p class="sub">Ảnh chụp từ bản 0.3.2 chạy thật, không dựng lại.</p>
+    <p class="sub">Ảnh chụp từ bản 0.4.0 chạy thật, không dựng lại.</p>
     <div class="shots">
       <figure>
         <img src="anh/man-hinh-chinh.png" alt="Trang chính của app">
         <figcaption>Trang chính</figcaption>
+      </figure>
+      <figure>
+        <img src="anh/co-the.png" alt="Một bài cờ thế: Đỏ đi trước chiếu hết sau 1 nước">
+        <figcaption>Cờ thế</figcaption>
       </figure>
       <figure>
         <img src="anh/ban-co.png" alt="Bàn cờ tướng với quân Pháo đang được chọn">
@@ -232,6 +241,34 @@
     </p>
   </section>
 
+  <section id="co-the">
+    <h2>Cờ thế không chép từ sách</h2>
+    <p class="sub">
+      Cờ tướng không có kho bài tập mở như cờ vua. Thay vì chép thế cờ từ sách
+      — vướng bản quyền, mà chép theo trí nhớ thì sai vẫn hợp lệ và không ai
+      phát hiện ra — 110 bài ở đây được <b>sinh bằng thuật toán rồi lọc bằng
+      máy</b>.
+    </p>
+    <p>Mỗi bài phải qua bốn cửa mới được vào kho:</p>
+    <ul>
+      <li>Thế cờ <b>có thật</b> — không phải thế không ván nào tới được.</li>
+      <li>Đỏ đi trước <b>ép thắng</b> đúng số nước đã ghi, không hơn không kém.</li>
+      <li><b>Đúng một</b> nước mở đầu thắng — nhiều đường thì mò cũng trúng.</li>
+      <li>Đường thắng mẫu đi được thật và kết thúc bằng thế hết nước đi.</li>
+    </ul>
+    <p>
+      Lúc bạn giải, trọng tài là chính bộ giải chứ không phải lời giải chép sẵn:
+      <b>mọi nước còn giữ được thế thắng đều được chấp nhận</b>, không bắt bạn
+      đoán trúng đúng một đường mà người ra đề nghĩ ra. Còn máy thì <b>chống đỡ
+      dai nhất có thể</b> — để nó đỡ dở thì bạn thắng mà chẳng học được gì.
+    </p>
+    <p>
+      Chỗ yếu, nói luôn: cách này <b>chỉ sinh được thế chiếu hết ngắn</b>, không
+      sinh được thế trung cuộc có ý nghĩa. Và độ khó ở đây là <b>số nước, không
+      phải Elo</b> — một bài 1 nước có thể khó hơn một bài 3 nước.
+    </p>
+  </section>
+
   <section id="may">
     <h2>Máy đấu được đo, không phải được khen</h2>
     <p class="sub">
@@ -259,9 +296,9 @@
     <h2>Chưa có gì</h2>
     <p class="sub">Nói trước để bạn khỏi tải về rồi mới biết.</p>
     <div class="panel">
-      <h3>Bản 0.3.2 chưa có</h3>
+      <h3>Bản 0.4.0 chưa có</h3>
       <ul>
-        <li>Bài tập chiến thuật và <b>cờ thế</b></li>
+        <li>Bài tập chiến thuật từ ván thật (cờ thế hiện chỉ có thế chiếu hết ngắn)</li>
         <li>Chấm ván, lịch sử ván, thống kê</li>
         <li>Âm thanh và hoạt cảnh quân đi</li>
         <li>Lưu ván đang dở khi thoát app</li>
@@ -311,7 +348,7 @@
 <footer>
   <div class="wrap">
     <p>
-      <b>PHÁO đầu</b> · bản 0.3.2 · cập nhật 17-08-2026 ·
+      <b>PHÁO đầu</b> · bản 0.4.0 · cập nhật 17-08-2026 ·
       <a href="rieng-tu.html">Quyền riêng tư</a> ·
       <a href="https://github.com/mittohoa/chinese-chess-web/releases">Các bản phát hành</a>
     </p>
