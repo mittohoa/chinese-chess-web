@@ -1,0 +1,22 @@
+# Khai cuộc cờ tướng — tên, chữ Hán, và ý tưởng.
+#
+# Dạng: tên|chữ Hán|bên|nước đi (toạ độ UCCI)|ý tưởng
+#
+# ĐÂY LÀ PHẦN GIỚI THIỆU TÊN VÀ Ý TƯỞNG, KHÔNG PHẢI SÁCH KHAI CUỘC.
+# Mỗi mục chỉ ghi vài nước **định hình** thế trận, không ghi biến. Sách khai
+# cuộc thật đi sâu hàng chục nước và có bản quyền; chép vào đây thì vừa vướng
+# bản quyền vừa dễ sai — mà một nước sai trong biến khai cuộc thì vẫn hợp lệ,
+# vẫn đọc được, và không bài kiểm nào bắt nổi (cạm bẫy #20).
+#
+# Nước đi được bài kiểm đi lại từ thế cờ đầu ván, nên mọi chuỗi ở đây chắc chắn
+# hợp luật. Còn "ý tưởng" thì viết ở mức nói được chắc, không đoán.
+
+Pháo đầu|中炮|do|h2e2|Nước khai cuộc phổ biến nhất của cờ tướng, và là nước app lấy làm tên. Pháo về cột giữa nhắm thẳng vào Tướng đối phương, doạ ăn Tốt đầu rồi chiếu. Ép đối phương phải trả lời ngay, nên nó đặt nhịp cho cả ván.
+Bình phong mã|屏風馬|den|h2e2 h9g7 h0g2 b9c7|Cách trả lời Pháo đầu phổ biến nhất. Hai Mã lên đứng cạnh nhau như tấm bình phong, cùng giữ con Tốt đầu. Chắc chắn, dễ hiểu, và là thế trận người mới nên học đầu tiên khi cầm Đen.
+Thuận pháo|順炮|den|h2e2 h7e7|Đen cũng đưa Pháo về cột giữa, **cùng bên** với Pháo Đỏ. Hai Pháo đối mặt nhau trên cột giữa nên thế cờ mở toang rất nhanh — ván thường sắc và ngắn.
+Nghịch pháo|列炮|den|h2e2 b7e7|Cũng là Pháo về cột giữa, nhưng bằng khẩu Pháo **bên kia**. Khác Thuận pháo ở chỗ hai cánh phát triển lệch nhau, nên hai bên đánh ở hai phía khác nhau của bàn.
+Tiên nhân chỉ lộ|仙人指路|do|c3c4|"Tiên chỉ đường": đẩy Tốt trước, chưa lộ ý định. Nước Tốt này mở đường cho Mã và giữ quyền chọn thế trận sau khi thấy đối phương làm gì. Thế trận chờ, không phải thế trận công.
+Khởi mã cục|起馬局|do|h0g2|Lên Mã trước thay vì Pháo. Chậm hơn Pháo đầu nhưng linh hoạt: chưa cam kết đánh cánh nào, và tránh những biến sắc mà Pháo đầu bắt buộc phải thuộc.
+Quá cung pháo|過宮炮|do|h2d2|Pháo đi ngang qua trước cung sang cánh bên kia. Dồn lực sang một cánh và nhắm vào chỗ đối phương chưa kịp giữ. Đổi lại, cánh vừa bỏ lại mỏng đi.
+Sĩ giác pháo|士角炮|do|h2f2|Pháo về góc Sĩ, ngay cạnh cung nhà. Nước kín: vừa giữ nhà, vừa để dành khả năng chuyển sang Pháo đầu hoặc sang cánh khác tuỳ đối phương.
+Phản cung mã|反宮馬|den|h2e2 b9c7 h0g2 h7f7|Pháo Đen về góc Sĩ, hai Mã sẽ kẹp hai bên. So với Bình phong mã thì cung nhà chắc hơn nhưng cánh phát triển chậm hơn một nhịp.

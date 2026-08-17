@@ -1,0 +1,50 @@
+# Bài tập chiến thuật trung cuộc — đường A.
+#
+# Sinh bằng tool/generate_tactics_test.dart từ ván MÁY TỰ ĐỐI,
+# rồi lọc: chỉ giữ thế có đúng một nước hơn nước nhì ít nhất
+# 300 điểm quân, xác nhận lại ở độ sâu 6.
+#
+# KHÁC KHO CỜ THẾ: bài chiếu hết thì CHỨNG MINH ĐƯỢC bằng bộ
+# giải. Bài ở đây chỉ có MÁY PHÁN là hơn — máy sâu hơn có thể
+# nghĩ khác. Đừng trộn hai kho vào nhau.
+#
+# Dạng: fen|nước đúng|hơn nước nhì bao nhiêu điểm
+3akab2/4c4/2n1b1n1R/p1p1p3p/9/5rP2/P1P5P/3CBC3/4AN3/R3KA3 b - - 0 18|g9i7|561
+4kab1r/3na4/4bc3/p7p/4p4/4N4/P1P5P/1N2B4/3CA4/4KABR1 b - - 0 20|e5e4|530
+1Rbakab2/9/n5n2/p1p1p1p1p/9/6P1P/P1P1c2r1/N1C1C4/4A4/2B1KAB1R b - - 0 11|a7b9|864
+2bakabnr/2C6/1c7/p3p3p/c5P2/9/P3P3P/R8/1r7/1NBAKABNR b - - 6 9|a5a2|445
+3ak4/4a4/b2c2c1b/4p4/2R5p/R8/4P1P1P/7N1/C3A4/1rBK1A3 b - - 0 33|a7c5|904
+1rbakab1C/9/6n2/p1p5p/4P1p2/9/P3c3P/Bc2n4/4A4/RN2KABNR w - - 0 13|g0e2|448
+2baka3/2r5c/2n1b1n2/p3p1p2/2R1c4/6P2/P8/R1N1C4/4A4/2BAK1BNC b - - 0 22|e7c5|374
+3aka3/2r5c/4b1n2/p3p1p2/2b6/4N1P2/P8/n3C1N2/4A4/2BAK1B1C w - - 0 28|c0a2|348
+1r1ak1br1/4a2N1/4b3n/p4c2p/9/5C3/P3c3P/4B2C1/4A4/2R1KAB1R w - - 10 19|h2h9|464
+3akab1r/4n4/R1c1b4/p1p3R1p/9/9/2N1P3P/2CrC4/4N4/2BAKAB2 b - - 0 16|c7c3|322
+4kab1r/3Pa4/9/3C2R2/1n2R4/8p/9/r3C4/4A4/3AK1B2 b - - 3 29|a2e2|28572
+2bnka2r/4a4/3cb4/p5p1p/2R1P4/5CP2/P1P5P/3nB1N2/3N5/R3KAB2 b - - 1 19|e7c5|452
+C1bakab1r/9/2n1C4/p5p1p/2p6/9/P2nP1c1P/B1N6/4A4/2R1KABNR b - - 2 11|g9e7|343
+C1bak4/1N2a4/4b4/p5p1p/2p1P4/9/P6RP/6n2/5rN2/4KcB1R w - - 0 25|h3h9|454
+C1ba1a3/4kr1R1/3Nb4/p5p1p/2p1P4/9/P7P/6n2/6N2/4KcB1R w - - 6 28|h8f8|614
+r1b1ka1r1/4a4/n3ccC1b/6C2/p7p/3NP4/P7P/4B4/5N3/R1BAKA2R b - - 0 18|e7g7|302
+r3kac2/4C4/4b3b/3n5/p8/1R1c2r1p/P8/4B4/4AN3/2B1KA3 w - - 0 31|e2g4|865
+2r1kac2/4C4/4b3b/9/p8/2Rc2B1p/P8/B8/4AN3/4KA3 b - - 0 33|c9c4|455
+2b1ka3/4a4/4b4/1r3np1p/R1p6/6P2/2P1r3P/3CB1N2/3NA1n2/3K1AB2 w - - 0 24|g2e3|994
+4kab1r/4a4/1n2b1c1n/1RcCp1p1p/3C5/5rP2/2P1P3P/N3B4/9/3AKAB1R w - - 0 16|b6c6|320
+3a1ab1r/4k1N2/1r4nc1/p7p/4p1b2/2B6/P3P3P/6N2/4A4/3RKAB2 w - - 0 19|g8i9|994
+rnb1kab2/4a4/4c4/p1C1p3p/5np2/9/P1P2cP1P/4C1N2/2N1A4/R1BK1ABr1 w - - 0 11|g2h0|342
+rn2kab2/4a4/4b4/p1C5p/4p4/C8/P1P3c1c/9/2N1A4/R1BK1AB2 b - - 4 17|b9a7|454
+4ka1nr/3na4/4b1c1c/p3p4/2R3b1p/1C3CB2/P3P3P/4B1N2/3NA4/4KA1R1 b - - 0 20|e7c5|906
+4ka1n1/3na4/6c2/1C2pC3/p1b3r2/8p/P3P2Nc/4B3B/3NA4/4KA3 w - - 0 28|h3g5|919
+1R1akabC1/3n5/b1c6/p3p1pRp/c2r5/2P3P2/P3P3P/4B3N/3NA4/4KAB2 b - - 0 18|d8b9|496
+1Rbaka2r/5n3/n3b4/p1p1p1p1p/9/9/P1P1P1PcP/2CcC1N2/2N1K4/2BA1AB1R b - - 0 9|a7b9|374
+1nbaka2r/5n3/4b4/p1p1p1p1p/9/P8/2P1P1PcP/2C1C1c2/2N1K4/2BA1AB1R w - - 0 11|c2g2|364
+rnbakab2/9/4c3n/p1C1p1p1p/9/2P6/P2cP1PRP/N7N/4A4/R1BAK1B2 b - - 0 9|e7e3|452
+r3ka3/4a1n2/n3b4/p5pCp/9/8P/P4pP2/4B3N/4A4/R2AK1B2 b - - 0 28|g8h6|527
+4kabnr/4a4/4b4/p1C1p4/8p/9/P1NrP1P1c/4B4/4AN3/R1B1KA1R1 b - - 0 12|d3c3|352
+2bakabn1/2n6/9/C1p1prp1p/9/9/P1c1P1P1P/4B1C1B/R1r1AN2R/4KA3 b - - 2 12|c1a1|484
+2bakabn1/2n6/9/C1p1prp1p/9/9/P1c1P1P1P/4B1C1B/r3AN2R/4KA3 w - - 0 13|a6a1|1008
+2b1kab2/4a4/4n4/4p1p1C/2p2r3/P8/2c1P1N2/4B4/2C1A3R/4KAB2 b - - 0 22|c3g3|306
+1r1akabr1/9/4b4/p1p1n1p1p/3N1c3/9/PcP1PR2P/4B4/3N5/1R1AKAB2 w - - 0 13|f3f5|430
+1r1akab2/9/4b4/p1p3p1p/3N5/3nPr3/PcP5P/4B4/3N5/1R1AKAB2 w - - 0 16|d5f4|653
+2b1kabnr/4a4/4c4/p3p1C1p/2pn5/9/P1P1c1P1P/2N1C4/4A1N2/1rB1KAB1R w - - 0 10|c2b0|938
+4kab1r/4a4/2n1b4/p3n1P1p/1R7/4p4/P3p3P/1CN1B4/9/1R1AKA3 b - - 0 21|c7b5|893
+r2ak1bnr/3na2R1/4b4/4p3p/p8/9/P3P1P1P/7C1/9/RNBAKAB1c b - - 7 11|i0h0|392
