@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chính sách quyền riêng tư — PHÁO đầu</title>
-<meta name="description" content="Chính sách quyền riêng tư của app cờ tướng PHÁO đầu. App không thu thập dữ liệu nào, không kết nối mạng, và không đòi quyền nào của người dùng.">
+<meta name="description" content="Chính sách quyền riêng tư của app cờ tướng PHÁO đầu. App không thu thập dữ liệu nào, không có máy chủ nào, và chỉ xin một quyền duy nhất — quyền mạng, để chơi cùng mạng nội bộ.">
 <meta name="theme-color" content="#B3241C">
 <link rel="icon" href="anh/logo.png" type="image/png">
 <style>
@@ -75,12 +75,13 @@
 
 <main class="wrap">
   <h1>Chính sách quyền riêng tư</h1>
-  <p class="sub">Áp dụng cho app <b>PHÁO đầu</b> bản 0.3.0 · cập nhật 16-08-2026</p>
+  <p class="sub">Áp dụng cho app <b>PHÁO đầu</b> bản 0.8.0 · cập nhật 20-08-2026</p>
 
   <div class="box">
     <p style="margin:0">
-      <b>Tóm tắt một câu:</b> app không thu thập gì, không gửi gì đi đâu, và
-      không có mã kết nối mạng nào.
+      <b>Tóm tắt một câu:</b> app không thu thập gì, không có máy chủ nào, và
+      chỉ xin đúng <b>một</b> quyền — quyền mạng, và chỉ để hai máy trong cùng
+      mạng Wi-Fi chơi cờ với nhau.
     </p>
   </div>
 
@@ -102,15 +103,30 @@
 
   <h2 id="quyen">Quyền Android</h2>
   <p>
-    App <b>không đòi quyền nào của bạn</b>: không mạng, không lưu trữ ngoài,
-    không camera, không micrô, không vị trí, không danh bạ, không thông báo,
-    không rung. Vì vậy khi cài, Android không hỏi bạn đồng ý gì cả.
+    Từ bản <b>0.8.0</b>, app khai báo <b>đúng một quyền xin từ bạn</b>:
+  </p>
+  <p><code>android.permission.INTERNET</code></p>
+  <p>
+    <b>Để làm gì:</b> chỉ để <b>chơi cùng mạng nội bộ</b> — hai máy trong cùng
+    một mạng Wi-Fi nói thẳng với nhau qua một kết nối TCP. Không dùng vào việc
+    gì khác.
   </p>
   <p>
-    Bản kê khai của app có đúng <b>một</b> dòng quyền, và nó không phải quyền
-    xin từ bạn:
+    <b>Tắt được không:</b> không tắt riêng được, vì Android không cho tắt quyền
+    mạng. Nhưng bạn <b>không dùng thì app không nối đi đâu cả</b>: kết nối chỉ
+    mở khi bạn tự vào mục <i>Chơi cùng mạng</i> và bấm mở cửa hoặc gõ địa chỉ
+    máy kia.
   </p>
-  <p><code>com.mittohoa.co_tuong.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></p>
+  <p>
+    <b>Nói thẳng một điều:</b> từ bản 0.3.0 tới 0.7.0, trang này hứa app
+    <i>không đòi quyền nào cả</i>. Bản 0.8.0 đổi điều đó. Trang này được sửa
+    <b>trước</b> khi bản đó phát hành — đúng như đã cam kết ở chính chỗ này.
+  </p>
+  <p>
+    Ngoài quyền trên, bản kê khai còn một dòng nữa, và nó <b>không phải</b>
+    quyền xin từ bạn:
+  </p>
+  <p><code>com.mittohoa.chinese_chess.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></p>
   <p>
     Đây là quyền <b>mức chữ ký, do thư viện AndroidX tự thêm vào</b> mọi app
     dùng nó. Nó chỉ có tác dụng ngăn app khác gửi thông điệp nội bộ vào app này
@@ -118,34 +134,46 @@
     danh sách quyền mà hệ điều hành hỏi người dùng.
   </p>
   <p>
-    Nếu bản sau có thêm quyền nào, trang này sẽ được cập nhật <b>trước</b> khi
-    bản đó phát hành, và ghi rõ: quyền gì, để làm gì, tắt được không.
+    App <b>vẫn không</b> xin: lưu trữ ngoài, camera, micrô, vị trí, danh bạ,
+    thông báo, rung, hay quyền tự cài phần mềm. Có bài kiểm đọc <b>bản kê khai
+    đã ghép</b> — thứ thật sự nằm trong tệp APK — để canh đúng danh sách đó.
   </p>
 
-  <h2>App có kết nối mạng không</h2>
+  <h2>App có gửi gì về máy chủ nào không</h2>
   <p>
-    Không. App <b>không khai báo quyền INTERNET</b> — vẫn đúng như vậy từ bản
-    0.3.0 tới bản 0.6.0 — nghĩa là hệ điều hành chặn mọi kết nối mạng của app kể
-    cả khi có mã cố tình gọi. Máy đấu, chấm ván và thống kê đều chạy hoàn toàn
-    trên máy bạn. Bật chế độ máy bay thì app vẫn chạy đủ mọi thứ.
+    <b>Không, và app không có máy chủ nào.</b> Đây là chỗ quan trọng hơn cả
+    chuyện có quyền mạng hay không.
   </p>
   <p>
-    Hệ quả: app <b>không</b> tự kiểm tra bản cập nhật, và sẽ không bao giờ tự
-    kiểm tra chừng nào lời hứa trên còn đứng — kiểm tra thì phải xin quyền mạng.
+    Quyền mạng chỉ dùng cho một việc: mở một kết nối TCP tới <b>máy kia trong
+    mạng nhà bạn</b>, do chính bạn gõ địa chỉ vào. Không có tài khoản, không có
+    dịch vụ nào ở giữa, không có ai đếm ván của bạn. Máy đấu, chấm ván, thống
+    kê và cờ thế vẫn chạy <b>hoàn toàn trên máy bạn</b> — bật chế độ máy bay
+    thì mọi thứ trừ mục chơi cùng mạng vẫn chạy đủ.
   </p>
   <p>
-    Từ bản 0.6.0, màn <b>Cài đặt</b> có nút <i>Xem bản mới trên trang phát
-    hành</i>. Nút đó <b>giao địa chỉ cho trình duyệt của bạn</b> rồi thôi: thứ
-    nối mạng là trình duyệt, không phải app. App không đọc được gì từ trang đó,
-    và không biết bạn có mở hay không. Muốn tự vào thẳng cũng được:
-    <a href="https://github.com/mittohoa/chinese-chess-web/releases">trang phát hành</a>.
+    App <b>không</b> tự kiểm tra bản cập nhật, dù giờ đã có quyền mạng.
   </p>
   <p>
-    Về mặt kỹ thuật, bản kê khai Android có thêm một mục <code>&lt;queries&gt;</code>
-    cho <code>VIEW</code>/<code>https</code>. Đó là <b>khả năng nhìn thấy ứng
-    dụng khác</b> (để mở được trình duyệt trên Android 11 trở lên), <b>không
-    phải quyền</b>: nó không mở mạng cho app và không hiện trong danh sách quyền
-    hệ điều hành hỏi bạn.
+    <b>Hai bản, và chúng khác nhau đúng một chỗ.</b> Bản trên <b>Google Play</b>
+    không có nút nào dẫn bạn ra ngoài để tải tệp cài — chính sách cửa hàng không
+    cho phép — nên nút <i>Xem bản mới trên trang phát hành</i> có từ bản 0.6.0
+    đã bị gỡ khỏi bản đó, gỡ luôn cả mục <code>&lt;queries&gt;</code> trong bản
+    kê khai. Bản <b>APK tải tay</b> ở
+    <a href="https://github.com/mittohoa/chinese-chess-web/releases">trang phát
+    hành</a> vẫn còn nút ấy; nút đó <b>giao địa chỉ cho trình duyệt của bạn</b>
+    rồi thôi, app không đọc được gì từ trang kia và không biết bạn có mở hay
+    không.
+  </p>
+  <p>
+    Bản chơi thử trên trình duyệt <b>không chơi mạng được</b> — trình duyệt
+    không cho trang web mở socket thẳng.
+  </p>
+  <p>
+    Về mặt kỹ thuật, mục <code>&lt;queries&gt;</code> nói trên (chỉ còn trong bản
+    APK tải tay) là <b>khả năng nhìn thấy ứng dụng khác</b> — để mở được trình
+    duyệt trên Android 11 trở lên — chứ <b>không phải quyền</b>: nó không mở
+    mạng cho app và không hiện trong danh sách quyền hệ điều hành hỏi bạn.
   </p>
 
   <h2>Bản chơi thử trên trình duyệt</h2>
